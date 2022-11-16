@@ -1,0 +1,1 @@
+Todas las imagenes de los mapas de calor se adjuntan en esta carpeta
