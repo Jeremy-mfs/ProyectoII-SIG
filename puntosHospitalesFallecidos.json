@@ -1,0 +1,15 @@
+{
+"type": "FeatureCollection",
+"name": "puntosHospitalesFallecidos",
+"features": [
+{ "type": "Feature", "properties": { "cat": 1, "pk_uid_1": 10, "pk_uid": 10, "nombre": "HOSPITAL DR. MAX PERALTA", "telefono": "2550-1999 / 2550-1998 / 2551-0300", "provincia": "CARTAGO", "canton": "CARTAGO", "distrito": "OCCIDENTAL" }, "geometry": { "type": "Point", "coordinates": [ -85.768975174560808, 10.446027670875962 ] } },
+{ "type": "Feature", "properties": { "cat": 2, "pk_uid_1": 13, "pk_uid": 13, "nombre": "HOSPITAL MONSEÑOR SANABRIA PUNTARENAS", "telefono": "2663-0033 / 2663-0133 / 2663-1199", "provincia": "PUNTARENAS", "canton": "PUNTARENAS", "distrito": "EL ROBLE" }, "geometry": { "type": "Point", "coordinates": [ -83.159300724686545, 8.967580064256857 ] } },
+{ "type": "Feature", "properties": { "cat": 3, "pk_uid_1": 19, "pk_uid": 19, "nombre": "HOSPITAL DE SAN CARLOS", "telefono": "2460-1179 / 2460-0533", "provincia": "ALAJUELA", "canton": "SAN CARLOS", "distrito": "CUIDAD QUESADA" }, "geometry": { "type": "Point", "coordinates": [ -83.175890716576291, 9.048913441856156 ] } },
+{ "type": "Feature", "properties": { "cat": 4, "pk_uid_1": 22, "pk_uid": 22, "nombre": "HOSPITAL SAN RAFAEL DE ALAJUELA", "telefono": "2441-5011 / 2441-6766 / 2441-1400", "provincia": "ALAJUELA", "canton": "ALAJUELA", "distrito": "ALAJUELA" }, "geometry": { "type": "Point", "coordinates": [ -83.213113720172586, 8.904640529211916 ] } },
+{ "type": "Feature", "properties": { "cat": 5, "pk_uid_1": 23, "pk_uid": 23, "nombre": "HOSPITAL SAN VICENTE PAUL HEREDIA", "telefono": "2261-0091 | 2277-2400", "provincia": "HEREDIA", "canton": "HEREDIA", "distrito": "HEREDIA" }, "geometry": { "type": "Point", "coordinates": [ -85.271128225326535, 9.928203848315881 ] } },
+{ "type": "Feature", "properties": { "cat": 6, "pk_uid_1": 30, "pk_uid": 30, "nombre": "HOSPITAL CLINICA CATOLICA DE LA PURISIMA", "telefono": "2283-6616 / 2283-6171", "provincia": "SAN JOSE", "canton": "GOICOECHEA", "distrito": "GUADALUPE" }, "geometry": { "type": "Point", "coordinates": [ -82.892260249180922, 8.711892389157516 ] } },
+{ "type": "Feature", "properties": { "cat": 7, "pk_uid_1": 31, "pk_uid": 31, "nombre": "HOSPITAL CLINICA MONTE SINAI S.A.", "telefono": "2460-6242 / 2460-6928 / 2460-1080", "provincia": "ALAJUELA", "canton": "SAN CARLOS", "distrito": "QUESADA" }, "geometry": { "type": "Point", "coordinates": [ -83.529156107591163, 8.780725374388524 ] } },
+{ "type": "Feature", "properties": { "cat": 8, "pk_uid_1": 33, "pk_uid": 33, "nombre": "HOSPITAL CRISTIANO JERUSALEM", "telefono": "2216-9191", "provincia": "SAN JOSE", "canton": "GOICOECHEA", "distrito": "GUADALUPE" }, "geometry": { "type": "Point", "coordinates": [ -85.579376220412982, 11.149247859263989 ] } },
+{ "type": "Feature", "properties": { "cat": 9, "pk_uid_1": 35, "pk_uid": 35, "nombre": "HOSPITAL DE ALAJUELA", "telefono": "2436-1000 | 2436-1001", "provincia": "ALAJUELA", "canton": "ALAJUELA", "distrito": null }, "geometry": { "type": "Point", "coordinates": [ -83.042227162311647, 9.613020888501856 ] } }
+]
+}
