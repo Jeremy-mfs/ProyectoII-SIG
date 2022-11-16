@@ -1,0 +1,53 @@
+---
+title: "Proyecto de Sistemas de Información geográfica"
+author: "Estudiantes: Jeremy Chacón Beckford-2021131338, Yessenia Solano Retana-2021050802"
+date: "Fecha de entrega: 15/11/2022"
+output: 
+html_document:
+  toc: yes
+  toc_depth: 2
+lang: es-Es
+---
+
+### Introducción
+ El siguiente proyecto consiste en la creación de mapas de calor(heatmaps) los cuales,
+ a través de colores fuertes, como rojo, naranja y amarillo, esta representación gráfica indica las partes de la página con las que más han interactuado los internautas, mientras que las zonas menos visitadas se identifican con colores suaves.(Just a moment,Agosto 29)
+ 
+ 
+ El desarollo  del proyecto consiste en tomar datos mediante tablas de excel brindadas con información sobre los casos positivos y las muertes provocadas debidas al covid desde el año 2020 hasta el año 2021 en el país de Costa Rica para poder generar un heatmap de escuelas,hospitales y clínicas. Los cuales serán realizados mediante la ayuda de los software de spatialite y Grass Gis.
+ 
+ 
+ 
+### Desarollo del proyecto
+
+Para la elaboración como primer paso se tomaron los archivos csv para importarlos a spatialite, los archivos excel con los que se trabajaron necesitaban la suma de las filas de los casos positivos y los fallecidos del año 2020 hasta el año 2021 para poder realizar un total de casos positivos y fallecidos para así conocer los lugares donde hubieron más casos positivos y personas fallecidas de cada cantón del país.
+
+Se importaron todos los archivos necesarios en Grass Gis que se brindaron con la información de hospitales,escuelas, clínicas, etc. Mediante el comando
+de datos vectoriales de v.import.
+
+Para realizar la suma necesaria en el software de spatialite se utilizo el siguiente comando:" SELECT
+  ID, Q1, Q2, Q3, Q4,
+  Q1 + Q2 + Q3 + Q4 AS "Total"
+FROM MyTable". En el que se remplazaban los "Q" por las fechas asociadas a los casos para poder realizar la suma correspondiente de casos positivos y fallecidos para luego realizar la exportación del archivo como shapefile. Mediante spatialite se añadieron todos los archivos que se utiliziarían para así poder exportarlos y poder ingresarlos a Grass Gis para realizar las interpolaciones de todos los archivos.
+
+Mediante el comando g.region vect=tablaFallecidos se definió una región para poder realizar puntos randoms que se utilizarían para la creación de los heatmaps, y mediante el comando v.random output=puntosFallecidos npoints=1200 restrict=tablaFallecidos se genero la cantidad de puntos de manera aleatoria.
+
+
+Luego se seleccionaron 8 cantones con la cantidad de casos y muertes más altos para así poder realizar la fusión en grass giss con el archivo shapefile de cantones que se brindo y lograr sincronizarlos. Para realizar la interpolación y generar los mapas raster con los diferentes heat maps correspondientes se utilizaron los siguientes comandos: 
+
+1. g.region vect=puntosHospitalesFallecidos
+
+
+2. v.surf.idw in=puntosHospitalesFallecidos out=RasterHospitalesFallecidos
+
+
+### Link página web
+
+https://proyectollsig.netlify.app/
+
+### Link Github
+
+https://github.com/Jeremy-mfs/ProyectoII-SIG.git
+
+ 
+ 
