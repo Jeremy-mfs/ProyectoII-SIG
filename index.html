@@ -1,0 +1,42 @@
+<html>
+    <!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Residencial Gonzales Angulo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.1/dist/leaflet.css"
+   integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+   crossorigin=""/>
+   <script src="https://unpkg.com/leaflet@1.9.1/dist/leaflet.js"
+   integrity="sha256-NDI0K41gVbWqfkkaHj15IzU7PtMoelkzyKp8TOaFQ3s="
+   crossorigin=""></script>
+   <style>
+    #map { height: 800px;
+    width:900;}
+   </style>
+  
+</head>
+
+<body>
+    <div id="map"></div>
+    <script src="puntosClinicasFallecidos.js"></script>
+    <script src="puntosEscuelasPositivos.js"></script>
+    <script src="puntosHospitalesFallecidos.js"></script>
+    <script src="tablaFallecidos.js"></script>
+    <script src="tablaPositivos.js"></script>
+    <script>
+        var map = L.map('map').setView([10.101,-83.293], 17);
+        L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 8,
+            attribution: '© OpenStreetMap'
+        }).addTo(map);
+        L.geoJson(puntosClinicasFallecidos).addTo(map);
+        L.geoJson(puntosEscuelasPositivos).addTo(map);
+        L.geoJson(puntosHospitalesFallecidos).addTo(map);
+        L.geoJson(tablaFallecidos).addTo(map);
+        L.geoJson(tablaPositivos).addTo(map);
+    </script>
+</body>
+</html>
